@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ddd;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+}
+/* LATIHAN 1 */
+.container.satu {
+    background-color: #eee;
+    padding: 10px;
+    display: flex;
+}
+
+.sidebar-satu {
+    order: 1;
+    flex: 1;
+}
+.sidebar-satu li {
+    list-style: none;
+}
+.sidebar-satu li a {
+    text-decoration: none;
+}
+
+.kolom-utama {
+    order: 2;
+    flex: 3;
+    padding: 0 10px;
+}
+
+.sidebar-dua {
+    order: 3;
+    flex: 1;
+}
+/* AKHIR LATIHAN 1 */
+
+/* LATIHAN 2 */
+.container.dua {
+    padding: 10px;
+}
+
+.layanan {
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: .3s;
+}
+.layanan.satu {background-color: aquamarine;}
+.layanan.dua {background-color: tomato;}
+.layanan.tiga {background-color: lightgreen;}
+
+.layanan:hover {
+    transform: scale(1.03);
+}
+
+/* AKHIR LATIHAN 2 */
+
+/* LATIHAN 3 */
+.container.tiga {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.thumbnail {
+    width: 45%;
+    margin: 10px;
+}
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+}
+/* AKHIR LATIHAN 3 */
+
+/* LATIHAN 4 */
+.card {
+    background-color: #eee;
+    border: 3px solid #555;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 10px;
+    flex: 1;
+}
+.card .header {
+    height: 150px;
+    background-color: #888;
+}
+.card .content {
+    text-align: center;
+    margin: 20px 0;
+    padding-bottom: 20px;
+}
+.card:hover button {
+    cursor: pointer;
+}
+.card.besar {
+    transform: scale(1.03);
+}
+/* AKHIR LATIHAN 4 */
+
+/*  RESPONSIVOS  */
+
+@media( min-width: 600px ) {
+    .container.dua {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .layanan {
+        width: 30%;
+    }
+    .layanan:hover {
+        transform: scale(1.2);
+    }
+
+    .thumbnail {
+        width: 30%;
+    }
+
+    .container.empat {
+        display: flex;
+    }
+    .card.besar {
+        transform: scale(1.1);
+    }
+}
